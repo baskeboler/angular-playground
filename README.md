@@ -3,6 +3,8 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
+This page is hosted in [Github Pages](http://baskeboler.github.io/angular-playground)
+
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
