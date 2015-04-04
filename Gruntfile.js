@@ -386,8 +386,25 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+
+  buildcontrol: {
+
+    options: {
+      dir: 'dist',
+      commit: true,
+      push: true,
+      message: 'Built from %sourceCommit% on branch %sourceBranch%'
+    },
+    pages: {
+      options: {
+        remote: 'git@github.com:baskeboler/angular-playground.git',
+        branch: 'gh-pages'
+      }
     }
-  });
+  }
+});
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
@@ -441,4 +458,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', 'Deploy to GitHub Pages', ['dist', 'buildcontrol']);
 };
