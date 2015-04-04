@@ -459,5 +459,5 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('deploy', 'Deploy to GitHub Pages', ['dist', 'buildcontrol']);
+  grunt.registerTask('deploy', 'Deploy to GitHub Pages', ['build', 'buildcontrol']);
 };
